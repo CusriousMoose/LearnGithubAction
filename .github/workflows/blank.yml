@@ -1,23 +1,25 @@
-name : Aditya actions
-on : workflow_dispatch
-jobs : 
+name: Aditya actions
+on: workflow_dispatch
+jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-     - name: build step
-       run : echo "Hi this is build step"
+      - name: build step
+        run: echo "Hi this is build step"
   test:
     runs-on: ubuntu-latest
     needs: build
     steps:
-     - name: test setup
-       run : |
-         echo "Hi this is test step"
-         echo " Hi this 2nd step of test"
-         echo " Hi this 3rd step of test"
+      - name: test setup
+        run: |
+          echo "Hi this is test step"
+          echo " Hi this 2nd step of test"
+          echo " Hi this 3rd step of test"
   deploy:
     runs-on: ubuntu-latest
     needs: test
     steps:
       - name: deploy step
-        run: echo "hello this is deploy step"
+        run: |
+          echo "hello this is deploy step"
+          echo "Hello this is 2nd Deploy step"
