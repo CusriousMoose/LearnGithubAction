@@ -32,4 +32,4 @@ jobs:
       - name: deploy step
         run: |
           echo "hello this is deploy step"
-          echo "Hello this is 2nd Deploy step"
+          echo "Hello this is 2nd Deploy step and my name is ${{ vars.MY_NAME }}"
