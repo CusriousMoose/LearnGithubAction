@@ -31,5 +31,5 @@ jobs:
     steps:
       - name: deploy step
         run: |
-          echo "hello this is deploy step"
+          echo "hello this is deploy step ${{Secrets.DOCKER_PASSWORD}}"
           echo "Hello this is 2nd Deploy step and my name is ${{ vars.MY_NAME }}"
