@@ -6,6 +6,8 @@ on:
       - feature
       - release
   pull_request:
+    types:
+      - opened #when PR is open & against main then only
     branches:
       - main
 jobs:
